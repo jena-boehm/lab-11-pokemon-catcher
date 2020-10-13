@@ -19,11 +19,8 @@ ON MAIN PAGE:
     - 3 radio buttons with image tags
         - the same name for each 
         - wrap in label tag
-        - values
     - button to catch pokemon
-    - button to clear and initialize state
     - span to display results
-    - span to display total 
 
 ON RESULTS PAGE:
     - div with all pokemon
