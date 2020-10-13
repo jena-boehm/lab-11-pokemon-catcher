@@ -6,11 +6,13 @@ const rightOrWrong = document.querySelector('#right-or-wrong');
 const results = document.querySelector('#results');
 const images = document.querySelectorAll('label > img');
 
+
 export function getRandomPokemon(array) {
     const index = Math.floor(Math.random() * array.length);
 
     return array[index];
 }
+
 
 export function refreshPokemon() {
     let optionOne = getRandomPokemon(rawPokemonData);
