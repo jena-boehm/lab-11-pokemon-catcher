@@ -6,6 +6,8 @@ const rightOrWrong = document.querySelector('#right-or-wrong');
 const results = document.querySelector('#results');
 const images = document.querySelectorAll('label > img');
 
+export const ALLPOKEMON = 'ALLPOKEMON';
+
 
 export function getRandomPokemon(array) {
     const index = Math.floor(Math.random() * array.length);
@@ -14,7 +16,7 @@ export function getRandomPokemon(array) {
 }
 
 
-export function refreshPokemon() {
+export function refreshPokemon(resultsArray) {
     let optionOne = getRandomPokemon(rawPokemonData);
     let optionTwo = getRandomPokemon(rawPokemonData);
     let optionThree = getRandomPokemon(rawPokemonData);
@@ -38,4 +40,46 @@ export function refreshPokemon() {
     
     radios[2].value = optionThree.id;
     images[2].src = optionThree.url_image;
+
+    for (let i = 0; i < radios.length; i++) {
+        // radios[i].addEventListener('change', (e) => {
+        const radio = radios[i];
+            // radios.forEach((radio) => {
+        let pokemon = findById(resultsArray, Number(radio.value)); 
+    
+        if (!pokemon) {
+            const newPokemon = findById(rawPokemonData, Number(radio.value));
+    
+            pokemon = {
+                name: newPokemon.pokemon,
+                id: Number(radio.value),
+                encountered: 1,
+                captured: 0
+            };
+            resultsArray.push(pokemon);
+        } else {
+            pokemon.encountered++;
+        }
+    }
+}
+
+
+export function findById(someArray, someId) {
+    for (let i = 0; i < someArray.length; i++) {
+        const item = someArray[i]; 
+        if (item.id === someId) {
+            return item;
+        }
+    }
+}
+
+
+export function seedAndGetPokemon() {
+    let localStoragePokemon = JSON.parse(localStorage.getItem(ALLPOKEMON));
+    if (!localStoragePokemon) {
+        const stringyPokemon = JSON.stringify(rawPokemonData);
+        localStorage.setItem(ALLPOKEMON, stringyPokemon);
+        localStoragePokemon = rawPokemonData;
+    }
+    return localStoragePokemon;
 }

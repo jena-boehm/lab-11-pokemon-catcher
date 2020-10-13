@@ -475,3 +475,106 @@ export const rawPokemonData = [
         'pokedex': 'http://www.pokemon.com/us/pokedex/pidgey'
     }
 ]
+
+
+
+
+export const rawPokemonArray = [
+    {
+        'name': 'bulbasaur',
+        'id': 1,
+        'captured': 0,
+        'encountered': 0
+    },
+
+    {
+        'name': 'ivysaur',
+        'id': 2,
+        'captured': 0,
+        'encountered': 0
+    },
+
+    {
+        'name': 'charmander',
+        'id': 5,
+        'captured': 0,
+        'encountered': 0
+    },
+
+    {
+        'name': 'charmeleon',
+        'id': 6,
+        'captured': 0,
+        'encountered': 0
+    },
+
+    {
+        'name': 'charizard',
+        'id': 7,
+        'captured': 0,
+        'encountered': 0
+    },
+
+    {
+        'name': 'squirtle',
+        'id': 10,
+        'captured': 0,
+        'encountered': 0
+    },
+
+    {
+        'name': 'wartortle',
+        'id': 11,
+        'captured': 0,
+        'encountered': 0
+    },
+
+    {
+        'name': 'blastoise',
+        'id': 12,
+        'captured': 0,
+        'encountered': 0
+    },
+
+    {
+        'name': 'caterpie',
+        'id': 14,
+        'captured': 0,
+        'encountered': 0
+    },
+
+    {
+        'name': 'metapod',
+        'id': 15,
+        'captured': 0,
+        'encountered': 0
+    },
+
+    {
+        'name': 'beedrill',
+        'id': 19,
+        'captured': 0,
+        'encountered': 0
+    },
+
+    {
+        'name': 'weedle',
+        'id': 17,
+        'captured': 0,
+        'encountered': 0
+    },
+
+    {
+        'name': 'kakuna',
+        'id': 18,
+        'captured': 0,
+        'encountered': 0
+    },
+    
+    {
+        'name': 'pidgey',
+        'id': 21,
+        'captured': 0,
+        'encountered': 0
+    }
+]
