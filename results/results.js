@@ -5,7 +5,6 @@ import { getFromLocalStorage } from '../utils.js';
 export function renderTable() {
     const table = document.querySelector('tbody');
     const pokemonResults = getFromLocalStorage('POKEMON') || [];
-    console.log(pokemonResults);
     for (let i = 0; i < pokemonResults.length; i++) {
         const result = pokemonResults[i];
         const tr = renderLineItems(result);
@@ -35,21 +34,39 @@ function renderLineItems(pokemon) {
 }
 
 
+const resultsArray = getFromLocalStorage('POKEMON');
+
+const pokemon = resultsArray.map((item) => {
+    return item.name;
+});
+
+const encounteredPoke = resultsArray.map((item) => {
+    return item.encountered;
+});
+
 
 var ctx = document.getElementById('myChart').getContext('2d');
+
 var chart = new Chart(ctx, { //eslint-disable-line
     // The type of chart we want to create
     type: 'bar',
 
     // The data for our dataset
     data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [{
-            label: 'My First dataset',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
-        }]
+        labels: pokemon,
+        datasets: [
+            // {
+            //     label: 'Times Caught',
+            //     backgroundColor: 'rgb(255, 99, 132)',
+            //     borderColor: 'rgb(255, 99, 132)',
+            //     data: capturedPoke,
+            // },
+            { label: 'Times Encountered',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: encounteredPoke,
+            }
+        ]
     },
 
     // Configuration options go here
