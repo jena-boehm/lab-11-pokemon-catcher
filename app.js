@@ -1,11 +1,11 @@
 // import functions and grab DOM elements
-import { refreshPokemon, findById, seedAndGetPokemon } from './utils.js';
-import { rawPokemonArray, rawPokemonData } from './pokemon-data.js';
+import { refreshPokemon, findById, setInLocalStorage } from './utils.js';
 
 const radios = document.querySelectorAll('input');
 const catchButton = document.querySelector('button');
 const results = document.querySelector('#results');
 const images = document.querySelectorAll('label > img');
+export const POKEMON = 'POKEMON';
 
 
 // initialize state
@@ -37,7 +37,9 @@ catchButton.addEventListener('click', () => {
     }
 
     if (totalRounds === 10) {
-        location.href = './results';
+
+        setInLocalStorage(POKEMON, resultsArray);
+        window.location.href = './results';
     }
 });
 

@@ -6,8 +6,6 @@ const rightOrWrong = document.querySelector('#right-or-wrong');
 const results = document.querySelector('#results');
 const images = document.querySelectorAll('label > img');
 
-export const ALLPOKEMON = 'ALLPOKEMON';
-
 
 export function getRandomPokemon(array) {
     const index = Math.floor(Math.random() * array.length);
@@ -73,13 +71,14 @@ export function findById(someArray, someId) {
     }
 }
 
+export function setInLocalStorage(key, value) {
+    const stringItem = JSON.stringify(value);
+    
+    localStorage.setItem(key, stringItem);
+    return value; 
+}
 
-export function seedAndGetPokemon() {
-    let localStoragePokemon = JSON.parse(localStorage.getItem(ALLPOKEMON));
-    if (!localStoragePokemon) {
-        const stringyPokemon = JSON.stringify(rawPokemonData);
-        localStorage.setItem(ALLPOKEMON, stringyPokemon);
-        localStoragePokemon = rawPokemonData;
-    }
-    return localStoragePokemon;
+export function getFromLocalStorage(key) {
+    const item = localStorage.getItem(key);
+    return JSON.parse(item);
 }
