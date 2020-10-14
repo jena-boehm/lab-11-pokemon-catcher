@@ -1,6 +1,13 @@
 import { rawPokemonData } from '../pokemon-data.js';
-import { getFromLocalStorage } from '../utils.js';
+import { getFromLocalStorage, mungeData } from '../utils.js';
 
+const resultsArray = getFromLocalStorage('POKEMON');
+const encounteredData = mungeData(resultsArray, 'encountered');
+const capturedData = mungeData(resultsArray, 'captured');
+const playAgainButton = document.querySelector('button');
+
+
+// RESULTS TABLE
 
 export function renderTable() {
     const table = document.querySelector('tbody');
@@ -34,14 +41,12 @@ function renderLineItems(pokemon) {
 }
 
 
-const resultsArray = getFromLocalStorage('POKEMON');
+
+
+// CHART
 
 const pokemon = resultsArray.map((item) => {
     return item.name;
-});
-
-const encounteredPoke = resultsArray.map((item) => {
-    return item.encountered;
 });
 
 
@@ -55,16 +60,16 @@ var chart = new Chart(ctx, { //eslint-disable-line
     data: {
         labels: pokemon,
         datasets: [
-            // {
-            //     label: 'Times Caught',
-            //     backgroundColor: 'rgb(255, 99, 132)',
-            //     borderColor: 'rgb(255, 99, 132)',
-            //     data: capturedPoke,
-            // },
+            {
+                label: 'Times Caught',
+                backgroundColor: 'rgb(204, 0, 0)',
+                borderColor: 'rgb(59, 76, 202)',
+                data: capturedData,
+            },
             { label: 'Times Encountered',
-                backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132)',
-                data: encounteredPoke,
+                backgroundColor: 'rgb(255, 222, 0)',
+                borderColor: 'rgb(59, 76, 202)',
+                data: encounteredData,
             }
         ]
     },
@@ -74,3 +79,7 @@ var chart = new Chart(ctx, { //eslint-disable-line
 });
 
 
+// PLAY AGAIN BUTTON
+playAgainButton.addEventListener('click', () => {
+    window.location.href = '../';
+});

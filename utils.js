@@ -77,3 +77,15 @@ export function getFromLocalStorage(key) {
     const item = localStorage.getItem(key);
     return JSON.parse(item);
 }
+
+export function mungeData(array, item) {
+    const returnArray = [];
+    array.forEach(someId => {
+        let returnItem = null;
+        if (item === 'encountered' || item === 'captured') 
+            returnItem = someId[item];
+        else returnItem = findById(rawPokemonData, someId)[item];
+        returnArray.push(returnItem);
+    });
+    return returnArray;
+}
