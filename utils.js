@@ -19,16 +19,11 @@ export function refreshPokemon(resultsArray) {
     let optionTwo = getRandomPokemon(rawPokemonData);
     let optionThree = getRandomPokemon(rawPokemonData);
     
-    while (optionOne.id === optionTwo.id) {
+    while (optionOne.id === optionTwo.id || optionTwo.id === optionThree.id || optionThree.id === optionOne.id) {
         optionOne = getRandomPokemon(rawPokemonData);
-    }
-    while (optionTwo.id === optionThree.id) {
         optionTwo = getRandomPokemon(rawPokemonData);
-    }
-    while (optionThree.id === optionOne.id) {
         optionThree = getRandomPokemon(rawPokemonData);
     }
-    
     
     radios[0].value = optionOne.id;
     images[0].src = optionOne.url_image;
