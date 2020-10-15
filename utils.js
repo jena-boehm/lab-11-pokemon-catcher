@@ -7,6 +7,7 @@ const results = document.querySelector('#results');
 const images = document.querySelectorAll('label > img');
 
 
+
 export function getRandomPokemon(array) {
     const index = Math.floor(Math.random() * array.length);
 
