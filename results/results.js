@@ -75,7 +75,26 @@ var chart = new Chart(ctx, { //eslint-disable-line
     },
 
     // Configuration options go here
-    options: {}
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        },
+        legend: {
+            display: false
+        },
+        layout: {
+            padding: {
+                left: 30,
+                right: 30,
+                top: 30,
+                bottom: 30
+            }
+        }
+    }
 });
 
 

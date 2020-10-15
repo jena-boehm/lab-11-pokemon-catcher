@@ -27,12 +27,15 @@ export function refreshPokemon(resultsArray) {
     
     radios[0].value = optionOne.id;
     images[0].src = optionOne.url_image;
+    radios[0].checked = false;
     
     radios[1].value = optionTwo.id;
     images[1].src = optionTwo.url_image;
+    radios[1].checked = false;
     
     radios[2].value = optionThree.id;
     images[2].src = optionThree.url_image;
+    radios[2].checked = false;
 
     for (let i = 0; i < radios.length; i++) {
         // radios[i].addEventListener('change', (e) => {

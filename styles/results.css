@@ -1,0 +1,103 @@
+body {
+    background-image: url('../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    border: 1px solid red;
+    height: 130px;
+    width: 80%;
+    border: 1px solid #3B4CCA;
+    border-radius: 20px;
+    background-color: black;
+    margin-top: 50px;
+    text-align: center;
+    font-family: "Pokemon Hollow";
+    color: #FFDE00;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: .1em;
+    box-shadow: 1px 2px 5px 2px #5e715e;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    margin: 20px;
+    border: 1px solid #3B4CCA;
+    border-radius: 20px;
+    width: 80%;
+    box-shadow: 1px 2px 5px 2px #5e715e;
+    color: white;
+    font-family: 'MetropolisRegular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+table {
+    border-collapse: collapse;
+    width: 600px;
+    height: 500px;
+    text-align: center;
+}
+
+th {
+    padding: 15px;
+}
+
+thead {
+    border-bottom: solid 1px white;
+    font-size: 1.3em;
+}
+
+tbody {
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}
+
+td {
+    border: 1px dotted white;
+    padding: 10px;
+}
+
+button {
+    width: 130px;
+    height: 40px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    background-color: black;
+    border: 4px #FFDE00 outset;
+    color: #FFDE00;
+    font-size: 1.3em;
+    box-shadow: 1px 1px 5px 1px white;
+}
+
+button:hover {
+    background: #ac0303;
+    color: white;
+}
+
+button:active {
+    background-color: #550101;
+    transform: translateY(2px);
+    border: 4px #FFDE00 inset;
+}
+
+.chart {
+    padding: 50px;
+
+}

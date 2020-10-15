@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+    <link href="//db.onlinewebfonts.com/c/6e5393a64ca23c455e8568d409e82da6?family=Pokemon+Hollow" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/metropolis" type="text/css"/>
+    <link rel="stylesheet" href="styles/main.css">
     <title>Pokemon Catcher</title>
 </head>
 
 <body>
-  
+    <section class="header">
+        <div class="header-text">Pokemon Catcher!</div>
+    </section>
     <main>
-        <section>
+        <section class="game">
             <div id="three-pokemon">
-                <label>
+                <label class="poke-options">
                     <input type="radio" name="pokemon" />
                     <img />
                 </label>
@@ -27,11 +30,11 @@
                     <input type="radio" name="pokemon" />
                     <img />
                 </label>
-                <button id="catch">Catch</button>
             </div>
-            <div class="hidden" id="results">
-                <div id="right-or-wrong"></div>
-            </div>
+        </section>
+        <div class="pokeball-count" id="pokeball-count"></div>
+        <section class="button">
+            <button id="catch">Catch!</button>
         </section>
     </main>
 
