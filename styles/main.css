@@ -19,7 +19,7 @@ body {
     background-color: black;
     margin-top: 50px;
     text-align: center;
-    font-family: "Pokemon Hollow";
+    font-family: 'Pokemon Hollow';
     color: #FFDE00;
     font-size: 4em;
     display: flex;
@@ -105,4 +105,9 @@ input {
 
 label {
     margin: 5px;
+}
+
+@font-face {
+    font-family: "Pokemon Hollow"; 
+    src: url('../pokemon-hollow.ttf');
 }

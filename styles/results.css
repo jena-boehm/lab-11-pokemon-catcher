@@ -101,3 +101,8 @@ button:active {
     padding: 50px;
 
 }
+
+@font-face {
+    font-family: "Pokemon Hollow"; 
+    src: url('../pokemon-hollow.ttf');
+}
