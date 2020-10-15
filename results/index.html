@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://db.onlinewebfonts.com/c/6e5393a64ca23c455e8568d409e82da6?family=Pokemon+Hollow" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/metropolis" type="text/css"/>
+    <link rel="stylesheet" href="../styles/results.css">
+    <title>Results</title>
+</head>
+
+<body>
+    <section class="header">
+        <div class="header-text">Results</div>
+     </section>
+    <main>
+        <section class="button">
+            <button>Play Again!</button>
+        </section>
+        <section class="results">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pokemon</th>
+                        <th>Captured</th>
+                        <th>Encountered</th>
+                    </tr>
+                </thead>
+                <tbody id="table"></tbody>
+            </table>
+        </section>
+        <section class="chart">
+            <canvas id="myChart" width="1000px"></canvas>
+        </section>
+    </main>
+
+    <script type="module" src="./results.js"></script>
+</body>
+
+</html>

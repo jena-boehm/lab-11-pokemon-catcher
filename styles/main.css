@@ -1,0 +1,108 @@
+body {
+    background-image: url('../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    border: 1px solid red;
+    height: 130px;
+    width: 80%;
+    border: 1px solid #3B4CCA;
+    border-radius: 20px;
+    background-color: black;
+    margin-top: 50px;
+    text-align: center;
+    font-family: "Pokemon Hollow";
+    color: #FFDE00;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: .1em;
+    box-shadow: 1px 2px 5px 2px #5e715e;
+}
+
+main {
+    display: block;
+    background-color: black;
+    margin: 20px;
+    border: 1px solid #3B4CCA;
+    border-radius: 20px;
+    width: 80%;
+    box-shadow: 1px 2px 5px 2px #5e715e;
+    color: #FFDE00;
+    text-align: center;
+    font-family: 'MetropolisRegular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.pokeball-count {
+    font-size: 1.5em;
+    margin-bottom: 50px;
+}
+
+.game {
+    display: block;
+    height: 400px;
+    padding-top: 50px;
+}
+
+button {
+    width: 130px;
+    height: 40px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: black;
+    border: 4px #FFDE00 outset;
+    color: #FFDE00;
+    font-size: 1.3em;
+    box-shadow: 1px 1px 5px 1px white;
+    font-family: 'MetropolisRegular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+button:hover {
+    background: #ac0303;
+    color: white;
+}
+
+button:active {
+    background-color: #550101;
+    transform: translateY(2px);
+    border: 4px #FFDE00 inset;
+}
+
+input[type="radio"]:hover + img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+input[type="radio"]:checked + img {
+    opacity: 1;
+    border: 3px solid#FFDE00;
+    border-radius: 20px;
+    transform: scale(1.1);
+}
+
+input[type="radio"] + img {
+    opacity: .9;
+    height: 300px;
+}
+
+input {
+    display: none;
+}
+
+label {
+    margin: 5px;
+}
